@@ -1,0 +1,20 @@
+{
+  "name": "myphotospace-backend",
+  "version": "1.0.0",
+  "description": "Backend of My Photo Space App",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index",
+    "dev": "nodemon index"
+  },
+  "keywords": [
+    "photos",
+    "app",
+    "backend"
+  ],
+  "author": "smcode.dev",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
