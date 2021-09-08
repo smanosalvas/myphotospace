@@ -1,6 +1,6 @@
 steps:
 - name: 'gcr.io/cloud-builders/docker'
-  args: [ 'build', '-t', 'gcr.io/$PROJECT_ID/myphotospace-api','.' ]
+  args: [ 'build', '-f', 'backend/Dockerfile', '-t', 'gcr.io/$PROJECT_ID/myphotospace-api','backend/' ]
 - name: 'gcr.io/cloud-builders/docker'
   args: ['push', 'gcr.io/$PROJECT_ID/myphotospace-api']
 - name: 'gcr.io/cloud-builders/gcloud'
