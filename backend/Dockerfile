@@ -11,5 +11,6 @@ RUN npm install --only=production
 COPY . . 
 
 EXPOSE 9090
+EXPOSE 8080
 
 CMD [ "npm", "start" ]
