@@ -1,9 +1,15 @@
-const express = require('express')
-const app = express()
+const express = require('express');
+const app = express();
+const helmet = require('helmet');
+const cors = require('cors');
+const images = require('./src/routes/images');
 
-app.get('/', (req, res) => {
-    res.status(200).send('Welcome to My Photo Space!!')
-});
+app.use(express.json());
+app.use(cors({
+    origin: process.env.ORIGIN || 'http://localhost:3000'
+}));
+app.use(helmet());
+app.use('/images', images);
 
 app.listen(3000, (error) => {
     if(error){

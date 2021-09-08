@@ -127,3 +127,7 @@ dist
 
 ## Gooogle credentials 
 credentials.json
+
+## App directories
+uploads/
+downloads/
